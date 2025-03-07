@@ -1,0 +1,152 @@
+<div class="contain-fluid">
+  <div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+      <div class="carousel-inner">
+      <div class="carousel-item active" *ngFor="let banner of bannerList; let index = index" [ngClass]="{active : index === 0}">
+        <img [src]="baseUrl + banner.backdrop_path" class="d-block w-100" alt="{{banner.title}}">
+        <div class="carousel-caption d-none d-md-block">
+          <h3>{{banner.original_title}}</h3>
+          <p>{{banner.overview}}</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+
+
+<!-- Trending Movies -->
+
+<div class="contain mt-3 p-4">
+  <div class="row">
+    <h5>Trending Movies</h5>
+
+    <div class="rowposter">
+      <ng-container  *ngFor="let t of trendingMovie">
+      <img [src]="baseUrl+t.poster_path" alt="Trending Movie Poster" [routerLink]="['/movies',t.id]"
+      class="rowing largeposter">
+    </ng-container>
+    </div>
+  </div>
+</div>
+
+
+<!-- Action Movies -->
+
+<div class="contain mt-3 p-4">
+  <div class="row">
+    <h5>Action Movies</h5>
+
+    <div class="rowposter">
+      <ng-container  *ngFor="let t of actionMovieResult">
+      <img [src]="baseUrl+t.poster_path" alt="Trending Movie Poster" [routerLink]="['/movies',t.id]"
+      class="rowing largeposter">
+    </ng-container>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Adventure Movies -->
+
+<div class="contain mt-3 p-4">
+  <div class="row">
+    <h5>Adventure Movies</h5>
+
+    <div class="rowposter">
+      <ng-container  *ngFor="let t of adventureMovieResult">
+      <img [src]="baseUrl+t.poster_path" alt="Trending Movie Poster" [routerLink]="['/movies',t.id]"
+      class="rowing largeposter">
+    </ng-container>
+    </div>
+  </div>
+</div>
+
+
+<!-- Animation Movies -->
+
+<div class="contain mt-3 p-4">
+  <div class="row">
+    <h5>Animation Movies</h5>
+
+    <div class="rowposter">
+      <ng-container  *ngFor="let t of animationMovieResult">
+      <img [src]="baseUrl+t.poster_path" alt="Trending Movie Poster" [routerLink]="['/movies',t.id]"
+      class="rowing largeposter">
+    </ng-container>
+    </div>
+  </div>
+</div>
+
+
+<!-- Comedy Movies -->
+
+<div class="contain mt-3 p-4">
+  <div class="row">
+    <h5>Comedy Movies</h5>
+
+    <div class="rowposter">
+      <ng-container  *ngFor="let t of comedyMovieResult">
+      <img [src]="baseUrl+t.poster_path" alt="Trending Movie Poster" [routerLink]="['/movies',t.id]"
+      class="rowing largeposter">
+    </ng-container>
+    </div>
+  </div>
+</div>
+
+<!-- Documentary Movies -->
+
+<div class="contain mt-3 p-4">
+  <div class="row">
+    <h5>Documentary Movies</h5>
+
+    <div class="rowposter">
+      <ng-container  *ngFor="let t of documentaryMovieResult">
+      <img [src]="baseUrl+t.poster_path" alt="Trending Movie Poster" [routerLink]="['/movies',t.id]"
+      class="rowing largeposter">
+    </ng-container>
+    </div>
+  </div>
+</div>
+
+
+<!-- Science Fiction Movies -->
+
+<div class="contain mt-3 p-4">
+  <div class="row">
+    <h5>Science Fiction Movies</h5>
+
+    <div class="rowposter">
+      <ng-container  *ngFor="let t of scienceFictionMovieResult">
+      <img [src]="baseUrl+t.poster_path" alt="Trending Movie Poster" [routerLink]="['/movies',t.id]"
+      class="rowing largeposter">
+    </ng-container>
+    </div>
+  </div>
+</div>
+
+
+<!-- Thriller Movies -->
+
+<div class="contain mt-3 p-4">
+  <div class="row">
+    <h5>Thriller Movies</h5>
+
+    <div class="rowposter">
+      <ng-container  *ngFor="let t of thrillernMovieResult">
+      <img [src]="baseUrl+t.poster_path" alt="Trending Movie Poster" [routerLink]="['/movies',t.id]"
+      class="rowing largeposter">
+    </ng-container>
+    </div>
+  </div>
+</div>
